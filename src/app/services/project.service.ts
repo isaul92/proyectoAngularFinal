@@ -15,4 +15,26 @@ this.url=global.url;
 testService(){
     return "probando el servicio de angular";
 }
+
+
+///metodo para guardar 
+savedProject(project:Project):Observable<any>{
+let params=JSON.stringify(project);
+let headers=new HttpHeaders().set('Content-Type','application/json');
+return this._http.post(this.url+'save',params,{headers:headers});
+}
+
+//metodo para enlistar EN PETICION AJAX A MI SERVIDOR NODEJS
+getProyects():Observable<any>{
+let headers=new HttpHeaders().set('Content-Type','application/json');
+return this._http.get(this.url+"buscarTodos",{headers:headers});
+
+}
+
+
+
+
+
+
+
 }

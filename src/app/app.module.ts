@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { from } from 'rxjs';
 import { AppComponent } from './app.component';
 import { SobremiComponent } from './components/sobremi/sobremi.component';
 import { ProjectsComponent } from './components/projects/projects.component';
@@ -22,7 +22,7 @@ import {FormsModule} from '@angular/forms';
     ErrorComponent
   ],
   imports: [
-    BrowserModule,routing
+    BrowserModule,routing,HttpClientModule,FormsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
