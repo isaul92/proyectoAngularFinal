@@ -31,6 +31,15 @@ return this._http.get(this.url+"buscarTodos",{headers:headers});
 
 }
 
+getProject(id):Observable<any>{
+    let headers=new HttpHeaders().set('Content-Type','application/json');
+    return this._http.get(this.url+"buscar/"+id,{headers:headers});
+    
+    
+    
+    
+        }
+
 
 
 

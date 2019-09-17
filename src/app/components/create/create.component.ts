@@ -12,7 +12,7 @@ import { global } from '../../services/global';
 })
 export class CreateComponent implements OnInit {
 
-
+  public save_project: Project;
   public status: string;
   public filestoUpload: Array<File>;
   public title: string;
@@ -37,11 +37,12 @@ export class CreateComponent implements OnInit {
       response => {
         if (response.project) {
           //SUBIR IMAGENlocalhost:3700/api/subirImagen
-      
-          this._upLoadService.makeFileRequest(global.url + 'subirImagen/' + response.project._id, [], this.filestoUpload, 'image').then((result: any) => {
-            console.log(result);
-            this.status = "success";
 
+          this._upLoadService.makeFileRequest(global.url + 'subirImagen/' + response.project._id, [], this.filestoUpload, 'image').then((result: any) => {
+            this.save_project = response.project;
+         
+            this.status = "success";
+         
             form.reset();
           });
 

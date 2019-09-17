@@ -10,6 +10,7 @@ import { ErrorComponent } from './components/error/error.component';
 import {routing,appRoutingProviders} from './app.routing';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { DetalleComponent } from './components/detalle/detalle.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {FormsModule} from '@angular/forms';
     ProjectsComponent,
     CreateComponent,
     ContactComponent,
-    ErrorComponent
+    ErrorComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,routing,HttpClientModule,FormsModule

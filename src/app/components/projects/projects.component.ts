@@ -16,7 +16,9 @@ public url:string;
   constructor(
 private _projectService:ProjectService
 
-  ) { }
+  ) { 
+    this.url=global.url;
+  }
 
   ngOnInit() {
     this.getProjects();
